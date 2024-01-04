@@ -5,7 +5,7 @@ for file in *; do
 		if [[ ($file == *.mp3) || ($file == *.opus) ]]; then
 
 			album=$(mediainfo --Inform="General;%Album%" "$file" | sed s/:/-/g)
-			echo $album
+			echo "$album"
 			if [ ! -d "$album" ]; then
 				mkdir "$album"
 			fi
