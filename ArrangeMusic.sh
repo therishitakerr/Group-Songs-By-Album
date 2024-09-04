@@ -1,11 +1,6 @@
 #!/bin/bash
 
-currentDirectory=""
-if [ -z "$1" ]; then
-    currentDirectory=$(pwd) # Use the current directory if $1 is null
-else
-    currentDirectory="$1" # Use $1 if it's not null
-fi
+currentDirectory="$1" #pwd if $1 is null
 
 # Process each media file in the current directory
 for file in "$currentDirectory"/*.mp3 "$currentDirectory"/*.wav "$currentDirectory"/*.flac "$currentDirectory"/*.aac "$currentDirectory"/*.ogg "$currentDirectory"/*.m4a "$currentDirectory"/*.wma "$currentDirectory"/*.opus; do
