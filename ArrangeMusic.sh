@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Process each media file in the current directory
-for file in *.mp3 *.opus; do
+for file in *.mp3 *.wav *.flac *.aac *.ogg *.m4a *.wma *.opus; do
     if [[ -f "$file" ]]; then
         # Extract album information from the file
         album=$(mediainfo --Inform="General;%Album%" "$file" | sed 's/:/-/g')
